@@ -1,5 +1,5 @@
 <template>
-  <h1><a @click="buttonTest">{{ title }}</a></h1>
+  <v-btn text color="info" @click="axiosTest">Axios component</v-btn>
 </template>
 
 <script lang="ts">
@@ -24,25 +24,13 @@ export default class Logo extends Vue {
   /*------------------------------------------------------------------*\
   |*							    Methodes
   \*------------------------------------------------------------------*/
-  async buttonTest() {
+  async axiosTest() {
     let x = await this.$axios.$get('users');
     console.log(x);
   }
 }
 </script>
 
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
+<style lang="scss">
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 </style>
