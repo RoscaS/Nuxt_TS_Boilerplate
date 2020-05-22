@@ -1,20 +1,21 @@
-<template>
-  <v-content>
-    <v-container class="fill-height" fluid>
-      <h1>{{ title }}</h1>
-      <v-row class="mt5" align="center">
-        <v-btn class="text-capitalize" color="info" @click="buttonTest" text>
-          Axios
-        </v-btn>
-      </v-row>
-      <v-row class="mb5" align="center">
-        <Logo />
-      </v-row>
-      <v-row class="mb5" align="center">
-        <a href="#">Link test</a>
-      </v-row>
-    </v-container>
-  </v-content>
+<template lang="pug">
+  
+  v-content
+    v-container.fill-height(fluid)
+      h1 {{ title }}
+      v-row.mt5(align="center")
+        v-btn.text-capitalize(
+          color="info",
+          @click="buttonTest",
+          text
+        )
+          | lorem
+      v-row.mb5(align="center")
+        Logo
+      v-row.mb5(align="center")
+        a(href="#") Link test
+    
+  
 </template>
 
 <script lang="ts">
@@ -31,3 +32,5 @@ export default class Index extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped></style>
